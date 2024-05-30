@@ -1,4 +1,4 @@
-export default async function makeRequestAjax(idForm){
+async function makeRequestAjax(idForm){
         
     const formData = new FormData()
     formData.append('action',object_js.hook)

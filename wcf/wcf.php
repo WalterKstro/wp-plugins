@@ -89,7 +89,7 @@ add_action('wp_ajax_nopriv_make_request_ajax',function(){
 });
 
 /**
- * wp_ajax_make: Hook para usuarios logueados
+ * wp_ajax_: Hook para usuarios logueados
  */
 add_action('wp_ajax_make_request_ajax',function(){
     global $wpdb;

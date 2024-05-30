@@ -77,10 +77,10 @@ if( !function_exists("sendEmail") ){
         try {
             $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'server.aumenta.do';                    //Set the SMTP server to send through
+            $mail->Host       = '';                    //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'informacion@viassanjose.com.gt';                     //SMTP username
-            $mail->Password   = 'V@SFy9IvQBIvBXty';                               //SMTP password
+            $mail->Username   = '';                     //SMTP username
+            $mail->Password   = '';                               //SMTP password
             $mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
             $mail->Port       = 465;    
             

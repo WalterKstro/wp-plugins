@@ -51,11 +51,11 @@ if (!class_exists('Setup_wfc')) {
                 wp_enqueue_style('sweetalert-css', plugins_url('../assets/css/sweetalert2.min.css', __FILE__));
                 wp_enqueue_script('bootstrap-js', plugins_url('../assets/js/bootstrap.min.js', __FILE__),[],1,true);
                 wp_enqueue_script('sweetalert-js', plugins_url('../assets/js/sweetalert2.min.js', __FILE__), array('jquery'),1,true);
-                wp_enqueue_script('index-js', plugins_url('../assets/js/index.js', __FILE__),[],1,true);
-                //wp_enqueue_script('ajax-requests', plugins_url('../assets/js/ajax-requests.js', __FILE__),array('jquery'),true);
+                wp_enqueue_script('wc-index', plugins_url('../assets/js/index.js', __FILE__),[],time(),true);
+                wp_enqueue_script('ajax-requests', plugins_url('../assets/js/ajax-requests.js', __FILE__),array('jquery'),true);
 
                 /*localizar el script para peticiones AJAX*/
-                wp_localize_script("index-js","object_js",[
+                wp_localize_script("wc-index","object_js",[
                     'ajax_url' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('kstro'),
                     'hook' => 'make_request_ajax'

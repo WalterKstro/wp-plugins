@@ -1,10 +1,9 @@
-
 const ACTIONS = {
     create: 1,
     update: 2,
     select: 3,
     delete: 4
-}
+};
 
 function createModal(title,action,idModal) {
     
@@ -18,8 +17,7 @@ function createModal(title,action,idModal) {
     titleModal.textContent = title
     fieldAction.value = action
     
-}
-
+};
 
 /** TRIGGERS SHOW MODALS */
 function createForm(title = "Default title") {
@@ -31,16 +29,16 @@ function createForm(title = "Default title") {
     fieldIdForm.value = ''
 
     createModal(title,ACTIONS.create,"#modal_form")
-}
+};
 
 function editForm(title = "Default title",...rest) {
     createModal(title,ACTIONS.update,"#modal_form")
     fillFieldsFormEdit(rest)
-}
+};
 function showMessages(title = "Default title",idForm){
     createModal(title, ACTIONS.select,"#modal_messages");
     makeRequestAjax(idForm)    
-}
+};
 
 
 function fillFieldsFormEdit(arrayFields){
@@ -52,7 +50,7 @@ function fillFieldsFormEdit(arrayFields){
     fieldName.value = name
     fieldEmail.value = email
     fieldIdForm.value = idForm
-}
+};
 function formValidate(name,email) {
 
     if (name === '' || email === '') {
@@ -65,14 +63,14 @@ function formValidate(name,email) {
     }
 
     return (name !== '' && email !== '') ? true : false;
-}
+};
 
 function saveForm(evt) {
     const form = evt.target
     const { name, email } = Object.fromEntries(new FormData(form))
 
     if( !formValidate(name,email) ){ evt.preventDefault() }
-}
+};
 
 
 async function makeRequestAjax(idForm){
@@ -91,7 +89,7 @@ async function makeRequestAjax(idForm){
     const data = await response.text()
     wrapper.innerHTML = data
     
-}
+};
 
 function modalDeleteForm(idForm){
     
@@ -117,7 +115,7 @@ function modalDeleteForm(idForm){
             formDelete.submit()
         }
       });
-}
+};
 
 document.addEventListener("DOMContentLoaded", (event) => {
     const formCreate = document.getElementById("form");
