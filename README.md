@@ -1,0 +1,2 @@
+- wfc = Plugin de formulario de contacto
+- wc-carrousel = Plugin de carrousel de imagenes
