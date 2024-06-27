@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "node": "^21.6.2",
+    "tw-elements": "^2.0.0"
+  }
+}

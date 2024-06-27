@@ -1,0 +1,19 @@
+{
+    "name": "walter/wc-carrousel",
+    "description": "Plugin para crear carrousel en Wordpress",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Walter Castro",
+            "email": "walterkstro@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
