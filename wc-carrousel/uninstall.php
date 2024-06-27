@@ -11,8 +11,8 @@ if (!function_exists('WC_Uninstall')) {
     {
         global $wpdb;
 
-        $wpdb->query("drop table {$wpdb->prefix}carrousel");
         $wpdb->query("drop table {$wpdb->prefix}image");
+        $wpdb->query("drop table {$wpdb->prefix}carrousel");
     }
     WC_Uninstall();
 }
