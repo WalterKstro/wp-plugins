@@ -145,7 +145,8 @@ add_filter("rest_authentication_errors", function ($result) {
     }
 
     // no proteger la ruta de autenticacion
-    if($current_endpoint === "authentication") {
+    // no proteger las rutas locales
+    if($current_endpoint === "authentication" || str_contains($current_endpoint,"locale=user")) {
         return $result;
     }
     
