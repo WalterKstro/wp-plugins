@@ -1,2 +1,3 @@
 - wfc = Plugin de formulario de contacto
 - wc-carrousel = Plugin de carrousel de imagenes
+- wc-api = Plugin para personalizar la Rest API de Wordpress
